@@ -153,7 +153,7 @@ class Results extends StatelessWidget {
 class Skelton extends StatelessWidget {
   const Skelton({
     Key? key,
-    this.count = 5,
+    this.count = 6,
     this.padding = const EdgeInsets.fromLTRB(24.0, 12.0, 24.0, 12.0),
   }) : super(key: key);
 
@@ -162,26 +162,25 @@ class Skelton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: padding,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            for (int i = 0; i < count; i++) ...[
-              const SizedBox(height: 12.0),
-              Row(
-                children: [
-                  Container(width: 64.0, height: 64.0, color: AppColors.grey1),
-                  const SizedBox(width: 16.0),
-                  Container(width: 200.0, height: 16.0, color: AppColors.grey1),
-                ],
-              ),
-              const SizedBox(height: 12.0),
-              Container(width: double.infinity, height: 1.0, color: AppColors.grey1),
-            ],
+    return Padding(
+      padding: padding,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          for (int i = 0; i < count; i++) ...[
+            const SizedBox(height: 12.0),
+            Row(
+              children: [
+                Container(width: 64.0, height: 64.0, color: AppColors.grey1),
+                const SizedBox(width: 16.0),
+                Container(width: 200.0, height: 16.0, color: AppColors.grey1),
+              ],
+            ),
+            const SizedBox(height: 12.0),
+            Container(width: double.infinity, height: 1.0, color: AppColors.grey1),
           ],
-        ),
+        ],
       ),
     );
   }
