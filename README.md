@@ -2,7 +2,7 @@
 
 # Art Institute of Chicago
 
-A flutter app that searches artworks from the open API provided by Art Institute of Chicago. You can search artworks, see their details and view the artwork itself with ability zoom and pan.
+A flutter app that searches artworks from the open API provided by Art Institute of Chicago. You can search artworks, see their details and view the artwork itself with ability to zoom and pan. This application uses BLoC for managing its state.
 
 [Art Institute of Chicago API Docs](https://api.artic.edu/docs/)
 
